@@ -139,7 +139,7 @@ def main():
     ovftool_exec = '{}/ovftool'.format(module.params['ovftool_path'])
     ovf_command = [ovftool_exec]
 
-    ovf_base_options = ['--acceptAllEulas', '--skipManifestCheck', '--X:injectOvfEnv', '--powerOn', '--noSSLVerify',
+    ovf_base_options = ['--acceptAllEulas', '--skipManifestCheck', '--X:injectOvfEnv', '--powerOn', '--noSSLVerify', '--disableVerification',
                         '--allowExtraConfig', '--diskMode={}'.format(module.params['disk_mode']),
                         '--datastore={}'.format(module.params['datastore']),
                         '--name={}'.format(module.params['vmname'])]
