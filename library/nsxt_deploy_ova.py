@@ -140,7 +140,7 @@ def main():
     ovf_command = [ovftool_exec]
 
     ovf_base_options = ['--acceptAllEulas', '--skipManifestCheck', '--X:injectOvfEnv', '--powerOn', '--noSSLVerify', '--disableVerification',
-                        '--allowExtraConfig', '--lax', '--diskMode={}'.format(module.params['disk_mode']),
+                        '--allowExtraConfig', '--lax','--X:logFile=upload.log','--X:logLevel=verbose', '--diskMode={}'.format(module.params['disk_mode']),
                         '--datastore={}'.format(module.params['datastore']),
                         '--name={}'.format(module.params['vmname'])]
     if module.params['portgroup_ext']:
